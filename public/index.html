@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/color.css">
+  
+  <script defer src="/__/firebase/10.14.0/firebase-app-compat.js"></script>
+  
+  <script defer src="/__/firebase/10.10.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.14.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+</head>
+<body>
+  <header>
+    <h1>노트</h1>
+  </header>
+  <div id="notesContainer"></div>
+  <a href="write.html"><button type="button">새 글</button></a>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBqh_newPcy7PSLDUQ4unXMH4K1tM_btvg",
+      authDomain: "note-48991.firebaseapp.com",
+      projectId: "note-48991",
+      storageBucket: "note-48991.appspot.com",
+      messagingSenderId: "65394640622",
+      appId: "1:65394640622:web:3ffdb0c028cd0ead7255ff"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    </script>
+    <script type="module" src="./static/noteshow.js"></script>
+    <script type="module" src="./static/datasend.js"></script>
+</body>
+</html>
